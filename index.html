@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>George Wilstone Dismas | Portfolio</title>
+
+<meta name="description" content="Portfolio of George Wilstone Dismas — Computer Science student, programmer, graphic designer and creative.">
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        color: #1f2937;
+        background: #ffffff;
+        line-height: 1.6;
+    }
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .container {
+        width: min(1100px, 90%);
+        margin: auto;
+    }
+
+    /* Navigation */
+
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.95);
+        border-bottom: 1px solid #e5e7eb;
+    }
+
+    nav {
+        height: 72px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        font-size: 1.2rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 30px;
+        list-style: none;
+    }
+
+    .nav-links a {
+        font-size: 0.95rem;
+        color: #4b5563;
+        transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+        color: #111827;
+    }
+
+    /* Hero */
+
+    .hero {
+        min-height: 82vh;
+        display: flex;
+        align-items: center;
+        padding: 80px 0;
+    }
+
+    .hero-content {
+        max-width: 800px;
+    }
+
+    .eyebrow {
+        display: inline-block;
+        margin-bottom: 18px;
+        color: #2563eb;
+        font-weight: 600;
+        font-size: 0.95rem;
+    }
+
+    .hero h1 {
+        font-size: clamp(3rem, 8vw, 6rem);
+        line-height: 0.98;
+        letter-spacing: -4px;
+        color: #111827;
+        margin-bottom: 28px;
+    }
+
+    .hero p {
+        max-width: 650px;
+        font-size: 1.2rem;
+        color: #6b7280;
+        margin-bottom: 35px;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 13px 22px;
+        border-radius: 7px;
+        font-weight: 600;
+        transition: 0.2s ease;
+    }
+
+    .button-primary {
+        background: #111827;
+        color: white;
+    }
+
+    .button-primary:hover {
+        background: #2563eb;
+        transform: translateY(-2px);
+    }
+
+    .button-secondary {
+        border: 1px solid #d1d5db;
+        color: #374151;
+    }
+
+    .button-secondary:hover {
+        border-color: #111827;
+        transform: translateY(-2px);
+    }
+
+    /* Sections */
+
+    section {
+        padding: 100px 0;
+        border-top: 1px solid #f0f0f0;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+        letter-spacing: -1px;
+        margin-bottom: 15px;
+        color: #111827;
+    }
+
+    .section-intro {
+        color: #6b7280;
+        max-width: 650px;
+        margin-bottom: 45px;
+    }
+
+    /* About */
+
+    .about-grid {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 70px;
+    }
+
+    .about-text p {
+        margin-bottom: 18px;
+        color: #4b5563;
+    }
+
+    .info-box {
+        background: #f8fafc;
+        padding: 30px;
+        border-radius: 10px;
+        border: 1px solid #e5e7eb;
+    }
+
+    .info-item {
+        margin-bottom: 22px;
+    }
+
+    .info-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .info-label {
+        display: block;
+        font-size: 0.8rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        color: #9ca3af;
+        margin-bottom: 4px;
+    }
+
+    .info-value {
+        font-weight: 600;
+        color: #1f2937;
+    }
+
+    /* Skills */
+
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .skill-card {
+        padding: 28px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        transition: 0.2s ease;
+    }
+
+    .skill-card:hover {
+        transform: translateY(-4px);
+        border-color: #cbd5e1;
+    }
+
+    .skill-card h3 {
+        margin-bottom: 15px;
+        color: #111827;
+    }
+
+    .skill-card p {
+        color: #6b7280;
+    }
+
+    /* Projects */
+
+    .projects-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .project-card {
+        padding: 30px;
+        border: 1px solid #e5e7eb;
+        border-radius: 10px;
+        transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-number {
+        color: #2563eb;
+        font-weight: 700;
+        font-size: 0.9rem;
+        margin-bottom: 15px;
+    }
+
+    .project-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.3rem;
+    }
+
+    .project-card p {
+        color: #6b7280;
+        margin-bottom: 18px;
+    }
+
+    .project-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tag {
+        background: #f3f4f6;
+        color: #4b5563;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Contact */
+
+    .contact {
+        text-align: center;
+    }
+
+    .contact-content {
+        max-width: 650px;
+        margin: auto;
+    }
+
+    .contact-content p {
+        color: #6b7280;
+        margin-bottom: 30px;
+    }
+
+    /* Footer */
+
+    footer {
+        border-top: 1px solid #e5e7eb;
+        padding: 30px 0;
+        color: #9ca3af;
+        font-size: 0.9rem;
+    }
+
+    footer .container {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+
+    /* Mobile */
+
+    @media (max-width: 750px) {
+        .nav-links {
+            gap: 15px;
+        }
+
+        .nav-links li:nth-child(2) {
+            display: none;
+        }
+
+        .hero {
+            min-height: 75vh;
+            padding: 60px 0;
+        }
+
+        .hero h1 {
+            font-size: 3.2rem;
+            letter-spacing: -2px;
+        }
+
+        .hero p {
+            font-size: 1.05rem;
+        }
+
+        .about-grid,
+        .projects-grid,
+        .skills-grid {
+            grid-template-columns: 1fr;
+        }
+
+        section {
+            padding: 70px 0;
+        }
+
+        footer .container {
+            flex-direction: column;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo">George Wilstone</a>
+
+```
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</div>
+```
+
+</header>
+
+<main>
+
+```
+<!-- HERO -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+
+            <span class="eyebrow">Computer Science Student · Creative</span>
+
+            <h1>George Wilstone Dismas</h1>
+
+            <p>
+                I’m a Computer Science student, programmer and graphic designer
+                interested in building digital experiences that combine technology
+                and creativity.
+            </p>
+
+            <div class="buttons">
+                <a href="#projects" class="button button-primary">
+                    View My Work
+                </a>
+
+                <a href="#contact" class="button button-secondary">
+                    Get In Touch
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about">
+    <div class="container">
+
+        <h2 class="section-title">About Me</h2>
+
+        <p class="section-intro">
+            A little about my background, interests and what I enjoy creating.
+        </p>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    I am a Computer Science student at the School of St Jude
+                    with an interest in programming, web design and visual
+                    creativity.
+                </p>
+
+                <p>
+                    My interests sit between technology and design. I enjoy
+                    writing code, creating websites, designing graphics and
+                    producing visual content.
+                </p>
+
+                <p>
+                    I am continuously developing my technical and creative
+                    skills through learning, experimentation and personal
+                    projects.
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <div class="info-item">
+                    <span class="info-label">Education</span>
+                    <span class="info-value">School of St Jude</span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">Focus</span>
+                    <span class="info-value">
+                        Computer Science & Creative Technology
+                    </span>
+                </div>
+
+                <div class="info-item">
+                    <span class="info-label">GitHub</span>
+                    <span class="info-value">georgewilstone</span>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills">
+    <div class="container">
+
+        <h2 class="section-title">Skills</h2>
+
+        <p class="section-intro">
+            Technologies and creative tools I work with.
+        </p>
+
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <h3>Programming</h3>
+                <p>
+                    C++ · Python · SQL
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Web Development</h3>
+                <p>
+                    HTML · CSS · Web Design
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <h3>Creative Design</h3>
+                <p>
+                    Photoshop · Canva · Video Content Creation
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+    <div class="container">
+
+        <h2 class="section-title">Selected Projects</h2>
+
+        <p class="section-intro">
+            A selection of projects that demonstrate my technical and creative interests.
+        </p>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <div class="project-number">01</div>
+
+                <h3>Web Design Project</h3>
+
+                <p>
+                    A website project focused on clean structure,
+                    responsive design and user experience.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">Web Design</span>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-number">02</div>
+
+                <h3>Programming Project</h3>
+
+                <p>
+                    A programming project demonstrating problem solving,
+                    logic and software development skills.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">C++</span>
+                    <span class="tag">Python</span>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-number">03</div>
+
+                <h3>Graphic Design Work</h3>
+
+                <p>
+                    A collection of visual designs created using digital
+                    design tools and creative concepts.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Canva</span>
+                </div>
+            </div>
+
+
+            <div class="project-card">
+                <div class="project-number">04</div>
+
+                <h3>Creative Media Project</h3>
+
+                <p>
+                    A creative project combining visual storytelling,
+                    digital content and technology.
+                </p>
+
+                <div class="project-tags">
+                    <span class="tag">Video</span>
+                    <span class="tag">Creative</span>
+                    <span class="tag">Content</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact">
+    <div class="container contact">
+
+        <div class="contact-content">
+
+            <h2 class="section-title">Let's Connect</h2>
+
+            <p>
+                I'm always interested in learning, creating and connecting
+                with people working on interesting ideas.
+            </p>
+
+            <a
+                href="https://github.com/georgewilstone"
+                target="_blank"
+                class="button button-primary"
+            >
+                Visit My GitHub
+            </a>
+
+        </div>
+    </div>
+</section>
+```
+
+</main>
+
+<footer>
+    <div class="container">
+
+```
+    <span>
+        © 2026 George Wilstone Dismas
+    </span>
+
+    <span>
+        Built with HTML & CSS
+    </span>
+
+</div>
+```
+
+</footer>
+
+</body>
+</html>
